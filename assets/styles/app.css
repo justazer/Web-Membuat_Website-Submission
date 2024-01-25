@@ -99,6 +99,39 @@ text-align: center;
   }
 }
 
+/* Gallery */
+
+.gallery-content {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-content .content-description {
+  flex: 1 1;
+}
+
+.gallery-content .content-description .title {
+  margin-block: 1rem;
+  font-size: 3.5rem;
+}
+
+.gallery-content .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.gallery-content .content-image {
+  flex: 1;
+  display: flex;
+  margin: 2rem;
+}
+
+.gallery-content .content-image img {
+  width: 300px;
+  min-width: 250px;
+  margin: auto;
+}
+
 /* Header */
 header.navbar-container {
   width: 100%;
