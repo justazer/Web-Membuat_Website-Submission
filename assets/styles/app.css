@@ -11,29 +11,106 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-
+main {
+  margin: 25px;
+  flex: 1;
+  margin-inline: auto;
+  padding: 2rem 4rem;
   display: flex;
-  flex-direction: column;
 }
 
+.home-content {
+  display: flex;
+  align-items: center;
+}
+
+.home-content .content-description {
+  flex: 1 1;
+}
+
+.home-content .content-description .title {
+  margin-block: 1rem;
+  font-size: 3.5rem;
+}
+
+.home-content .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.home-content .content-image {
+  flex: 1;
+  display: flex;
+  margin: 2rem;
+}
+
+.home-content .content-image img {
+  width: 300px;
+  min-width: 250px;
+  margin: auto;
+}
+
+/* Image Slideshow */
+.dot-under {
+text-align: center;
+}
+
+/* Slideshow */
+.content-image {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #0c134f;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* Header */
 header.navbar-container {
   width: 100%;
-  max-width: 1200px;
-  padding-block: 1rem;
   margin-inline: auto;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   z-index: 9999;
 }
 
 header.navbar-container .logo img {
-  width: 150px;
+  width: 100px;
 }
 
 header.navbar-container .nav-list ul {
@@ -65,72 +142,7 @@ header.navbar-container .nav-list li:hover a {
   color: white;
 }
 
-main {
-  flex: 1;
-
-  width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding: 2rem 4rem;
-
-  display: flex;
-  align-items: center;
-}
-
-main .content {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-}
-
-main .content .content-description {
-  flex: 1 1;
-}
-
-main .content .content-description .title {
-  margin-block: 1rem;
-
-  font-size: 3.5rem;
-}
-
-main .content .content-description p {
-  font-size: 1.2rem;
-  line-height: 1.7rem;
-}
-
-main .content .content-description button {
-  padding: 0.8rem 2.5rem;
-  border: 3px solid transparent;
-  border-radius: 999px;
-  margin-block-start: 1rem;
-  background-color: #0c134f;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-
-  cursor: pointer;
-  transition: all 0.15s ease-in;
-}
-
-main .content .content-description button:hover {
-  border: 3px solid #0c134f;
-  background-color: transparent;
-  color: #0c134f;
-}
-
-main .content .content-image {
-  flex: 1;
-  display: flex;
-}
-
-main .content .content-image img {
-  width: 300px;
-  min-width: 250px;
-  margin: auto;
-}
-
+/* Aside */
 main aside {
   position: fixed;
   inset-block: 0;
@@ -178,6 +190,77 @@ main aside .social-media li a {
   opacity: 30%;
 }
 
+/* Gaming Button */
+.rgb-btn {
+  padding: 0.8rem 2.5rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  background: #0c134f;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.rgb-btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-rgb-btn 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-rgb-btn {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.rgb-btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0c134f;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
 /* Medium devices (768px) */
 @media screen and (max-width: 768px) {
   header.navbar-container {
@@ -193,20 +276,20 @@ main aside .social-media li a {
     padding: 1rem 3rem;
   }
 
-  main .content {
+  .home-content {
     flex-direction: column;
     gap: 2rem;
   }
 
-  main .content .content-description .title {
+  .home-content .content-description .title {
     font-size: 3rem;
   }
 
-  main .content .content-description p {
+  .home-content .content-description p {
     font-size: 1rem;
   }
 
-  main .content .content-image {
+  .home-content .content-image {
     order: -1;
   }
 }
@@ -225,7 +308,7 @@ footer {
 
 /* Mobile */
 @media screen and (max-width: 430px) {
-  .social-media ul{
+  .social-media ul {
     width: 2.5rem;
     height: 10rem;
   }
