@@ -24,16 +24,16 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="navbar-container">
+    <header id="home" class="navbar-container">
       <div class="logo">
         <img src="./assets/images/rfb.ico" alt="RFB" />
       </div>
       <nav class="nav-list">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#overview">Overview</a></li>
           <li><a href="#whatsnew">What's New?</a></li>
-          <li><a href="#Creator">About Creator</a></li>
+          <li><a href="#creator">About Creator</a></li>
         </ul>
       </nav>
     </header>
@@ -42,66 +42,88 @@
     <!-- Home -->
     <main>
       <div class="content">
-        <article id="home">
+        <article id="home-c">
           <div class="home-content">
-            <div class="content-image">
-              <div class="home-slide fade">
-                <img src="./assets/images/bdo.png" style="width: 100%" />
+            <div class="img-slide">
+              <div class="content-image">
+                <div class="home-slide fade">
+                  <img src="./assets/images/bdo.png" />
+                </div>
+                <div class="home-slide fade">
+                  <img src="./assets/images/gow.png" />
+                </div>
+                <div class="home-slide fade">
+                  <img src="./assets/images/nfsh.png" />
+                </div>
+                <div class="home-slide fade">
+                  <img src="./assets/images/vl.png" />
+                </div>
               </div>
-              <div class="home-slide fade">
-                <img src="./assets/images/gow.png" style="width: 100%" />
-              </div>
-              <div class="home-slide fade">
-                <img src="./assets/images/nfsh.png" style="width: 100%" />
-              </div>
-              <div class="home-slide fade">
-                <img src="./assets/images/vl.png" style="width: 100%" />
+              <div class="dot-under">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
             </div>
-
-            <div class="dot-under">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-
             <div class="content-description">
               <h1 class="title">Reza Gaming Review</h1>
               <p>
                 Sobat Gamer, kita akan membahas beberapa game menarik yang
                 mungkin pernah kalian mainkan selama hidup kalian di dunia.
               </p>
-              <button class="rgb-btn">More</button>
+              <a class="rgb-btn" href="#overview">More</a>
             </div>
           </div>
         </article>
 
-        <!-- Gallery -->
-
-        <article id="gallery">
-          <div class="gallery-content">
-            <div class="gallery">
+        <!-- Overview -->
+        <article id="overview">
+          <h1 class="overview-title">Overview</h1>
+          <div class="overview-content">
+            <div class="overview">
               <a target="_blank" href="">
-                <img
-                  src="./assets/images/gow.png"
-                  alt="Cinque Terre"
-                  width="600"
-                  height="400"
-                />
+                <img src="./assets/images/gow2gl1.jpg" alt="God Of War II" />
               </a>
-              <div class="desc">Add a description of the image here</div>
-            </div>
-            <div class="gallery">
+              <div class="overview-description">
+                <h1 class="title">God Of War II</h1>
+                <p>
+                  God of War II adalah game yang dikembangkan oleh Santa Monica
+                  Studio Pertama kali dirilis untuk PlayStation 2 pada 13 Maret
+                  2007, game ini merupakan seri kedua dalam seri God of War.
+                  Berlatarbelakang pada mitologi Yunani dan berlatar Yunani
+                  kuno, dengan balas dendam sebagai motif utamanya. Main
+                  characternya adalah Kratos yaitu dewa Perang baru yang
+                  membunuh mantan dewa perang sebelumnya, Ares. Kratos
+                  dikhianati oleh Zeus, raja para dewa Olympus yang mengambil
+                  kekuatan dan membunuhnya. Saat Kratos berada di Underworld, ia
+                  diselamatkan oleh titan Gaia yang memberikan petunjuk untuk
+                  melakukan perjalanan kembali ke masa lalu dengan menemukan
+                  Sister of Fate
+                </p>
+              </div>
               <a target="_blank" href="">
-                <img
-                  src="./assets/images/gow.png"
-                  alt="Cinque Terre"
-                  width="600"
-                  height="400"
-                />
+                <img src="./assets/images/bdorg1.jpg" alt="BDO Re" />
               </a>
-              <div class="desc">Add a description of the image here</div>
+              <div class="overview-description">
+                <h1 class="title">Black Desert Online</h1>
+                <p>
+                  Black Desert Online adalah game yang dikembangkan oleh Pearl
+                  Abbys Studio Pertama kali dirilis untuk Microsoft Windows pada
+                  tahun 2014. Berkisah tentang konflik antara dua negara yang
+                  bersaing Republic Calpheon dan Kerajaan Valencia. Dahulu kala,
+                  empat wilayah utama, Calpheon, Serendia, Balenos, dan Mediah,
+                  berada dalam keadaan damai. Semua ini berubah ketika Black
+                  Death mulai menyebar melalui para pedagang dari Valencia, di
+                  wilayah timur Mediah yang menguasai perdagangan. Banyak orang
+                  di seluruh dunia meninggal karena wabah ini. Beberapa yang
+                  tidak, dikeluarkan karena kematian hitam yang menyebabkan
+                  paranoia. Akhirnya, tiga wilayah utama membuat aliansi dan
+                  memulai perang yang berlangsung selama 30 tahun; dengan Mediah
+                  yang mendapatkan keuntungan terbesar dengan memanen batu hitam
+                  dan menjualnya kepada orang lain.
+                </p>
+              </div>
             </div>
           </div>
         </article>
@@ -112,14 +134,13 @@
         <div class="social-media">
           <ul>
             <li>
-              <a href="https://www.instagram.com/rezafbaharsyah/"
-                ><img src="./assets/images/ig128.png" alt="instagram"
+              <a href="#home"
+                ><img src="./assets/images/house-128.png" alt="instagram"
               /></a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/reza-fauzi-baharsyah-3527b21bb/"
-                ><img src="./assets/images/lk128.png" alt="linkedin"
+              <a href="https://www.instagram.com/rezafbaharsyah/"
+                ><img src="./assets/images/ig128.png" alt="instagram"
               /></a>
             </li>
             <li>
