@@ -55,7 +55,6 @@ header.navbar-container .nav-list li a {
   text-decoration: none;
   font-size: 1.05rem;
   transition: all 0.2s ease-in-out;
-  
 }
 
 header.navbar-container .nav-list a {
@@ -70,10 +69,15 @@ header.navbar-container .nav-list li:hover a {
   color: white;
 }
 
+.article-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
 /* Home Content */
 #home {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .home-content {
@@ -151,7 +155,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 /* Overview */
-#overview{
+#overview {
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -161,46 +165,39 @@ header.navbar-container .nav-list li:hover a {
   flex-direction: row;
 }
 
-.overview-title{
-  font-size: 3rem;
-  text-align: center;
-}
-
-.overview img {
-  width: 10rem;
-}
-
-.overview-content {
+.article-content {
   display: flex;
   align-items: center;
-  padding-top: 30px;
 }
 
-.overview-content .overview-description {
-  padding: 1rem;
-  flex: 1 1;
+.content-description {
+  margin: 0.5rem;
 }
 
-.overview-content .overview-description .title {
-  margin-block: 1rem;
-  font-size: 2rem;
+.content-description .title {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-.overview-content .overview-description p {
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+.content-description p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-.overview-content .overview-image {
-  flex: 1;
-  display: flex;
-  margin: 2rem;
+a img {
+  width: 180px;
 }
 
-.overview-content .content-image img {
-  width: 300px;
-  min-width: 250px;
-  margin: auto;
+.content-intern {
+  text-align: center;
+  flex-basis: 400px;
+}
+
+/* What's New */
+#whatsnew {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* Aside */
@@ -223,7 +220,6 @@ main aside .social-media ul {
   margin: auto;
   background-color: #0c134f;
   transform: translateY(100%);
-
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -252,6 +248,7 @@ main aside .social-media li a {
 
 /* Gaming Button */
 .rgb-btn {
+  text-decoration-line: none;
   padding: 0.8rem 2.5rem;
   border: none;
   outline: none;
@@ -321,7 +318,61 @@ main aside .social-media li a {
   border-radius: 999px;
 }
 
+.me {
+  border-radius: 90px;
+}
+
 /* <=================== MEDIA RESOLUTION ===================> */
+/* Large devices (1000px) */
+@media screen and (max-width: 1000px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  .home-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-description .title {
+    margin-block: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .content-description p {
+    font-size: 0.8rem;
+  }
+
+  .home-content .content-image {
+    order: -1;
+  }
+
+  .overview {
+    flex-direction: column;
+  }
+
+  li {
+    font-size: 0.6rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  footer {
+    font-size: 0.6rem;
+  }
+}
+
 /* Medium devices (768px) */
 @media screen and (max-width: 850px) {
   header.navbar-container {
@@ -339,16 +390,16 @@ main aside .social-media li a {
 
   .home-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .content-description .title {
-    margin-block: 1rem;
-    font-size: 3rem;
+    margin-block: 0.5rem;
+    font-size: 1.5rem;
   }
 
   .content-description p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .home-content .content-image {
@@ -360,7 +411,7 @@ main aside .social-media li a {
   }
 
   li {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   a {
@@ -368,7 +419,7 @@ main aside .social-media li a {
   }
 
   footer {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -396,26 +447,30 @@ main aside .social-media li a {
     padding: 1rem 3rem;
   }
 
-  main .content {
+  .home-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .content-description .title {
-    margin-block: 1rem;
-    font-size: 2rem;
+    margin-block: 0.5rem;
+    font-size: 1.5rem;
   }
 
   .content-description p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
-  main .content .content-image {
+  .home-content .content-image {
     order: -1;
   }
 
+  .overview {
+    flex-direction: column;
+  }
+
   li {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   a {
@@ -423,6 +478,6 @@ main aside .social-media li a {
   }
 
   footer {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
